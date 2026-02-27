@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">finovate-kotlin</string>
+
+    <!--Home -->
+    <string name="home_title">Inicio</string>
+    <string name="home_balance_label">Balance Total</string>
+    <string name="home_title">Inicio</string>
+    <string name="home_title">Inicio</string>
 </resources>
