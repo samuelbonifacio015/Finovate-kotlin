@@ -1,13 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!-- 
+    ═══════════════════════════════════════════════════════════════════════════
+    EXPLICACIÓN PARA PRINCIPIANTES: Layouts XML
+    ═══════════════════════════════════════════════════════════════════════════
+    
+    ¿Qué es un Layout XML?
+    Es una forma de diseñar la interfaz gráfica de tu app usando archivos de texto.
+    En lugar de escribir todo el código UI en Kotlin, separamos la vista (XML)
+    de la lógica (Kotlin).
+    
+    ANALOGÍA CON FLUTTER:
+    Flutter:
+        Column(
+          children: [
+            Text('Hola'),
+            Text('Mundo'),
+          ],
+        )
+    
+    Android XML equivalente:
+        <LinearLayout
+            android:orientation="vertical">
+            <TextView android:text="Hola" />
+            <TextView android:text="Mundo" />
+        </LinearLayout>
+    
+    ─────────────────────────────────────────────────────────────────────────────
+    FrameLayout:
+    ─────────────────────────────────────────────────────────────────────────────
+    Es el layout más simple. Coloca todos los elementos uno encima de otro,
+    en la esquina superior izquierda.
+    
+    Atributos importantes:
+    - android:layout_width="match_parent" = ocupa todo el ancho disponible
+    - android:layout_height="match_parent" = ocupa toda la altura disponible
+    - android:padding="24dp" = espacio interior de 24dp (density-independent pixels)
+    
+    dp (density-independent pixels):
+    Es una unidad que se adapta a diferentes pantallas.
+    100dp siempre será aproximadamente 100px físicos, sin importar la densidad.
+    -->
+<FrameLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="24dp">
+    android:padding="24dp"
+    android:background="@color/white">
 
+    <!-- 
+        ═══════════════════════════════════════════════════════════════════════
+        TextView = widget para mostrar texto
+        ═════════════════════════════════════════════════════════════════════
+        
+        Equivalente en Flutter: Text('Hola Finovate')
+        
+        Atributos:
+        - android:id: Identificador único para acceder desde Kotlin
+          (como una "key" en Flutter para acceder al widget)
+          
+        - android:layout_width/wrap_content: 
+          "wrap_content" = ocupa solo lo que necesita el texto
+          "match_parent" = ocupa todo el espacio disponible
+          
+        - android:text: El texto a mostrar
+          Se puede hardcodear aquí o definirse en strings.xml
+          
+        - android:textSize: Tamaño de letra en sp (scale-independent pixels)
+          sp es como dp pero también respects la configuración de accesibilidad
+          
+        - android:textColor: Color del texto (referencia a colors.xml)
+    -->
     <TextView
+        android:id="@+id/textoBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello, World!"
-        android:textSize="24sp" />
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        android:textColor="@color/primary"
+        android:layout_gravity="center" />
 
 </FrameLayout>

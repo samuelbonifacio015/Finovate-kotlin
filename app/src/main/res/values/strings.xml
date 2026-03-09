@@ -1,9 +1,19 @@
 <resources>
-    <string name="app_name">finovate-kotlin</string>
+    <string name="app_name">Finovate</string>
 
-    <!--Home -->
+    <!-- Home -->
     <string name="home_title">Inicio</string>
     <string name="home_balance_label">Balance Total</string>
-    <string name="home_title">Inicio</string>
-    <string name="home_title">Inicio</string>
+    <string name="home_accounts">Mis Cuentas</string>
+    <string name="home_transactions">Transacciones Recientes</string>
+    <string name="home_see_all">Ver todo</string>
+
+    <!-- Transacciones -->
+    <string name="transaction_income">Ingreso</string>
+    <string name="transaction_expense">Gasto</string>
+
+    <!-- Bottom Navigation -->
+    <string name="nav_home">Inicio</string>
+    <string name="nav_transactions">Transacciones</string>
+    <string name="nav_profile">Perfil</string>
 </resources>
