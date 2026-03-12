@@ -9,8 +9,3 @@ data class Transaction (
     val fecha: String,
     val icono: String = "S/."
 )
-
-enum class TipoTransaccion {
-    INGRESO,
-    GASTO
-}
