@@ -5,6 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="#F5F5F5">
 
+    <!--App Topbar -->
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -19,31 +20,20 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <LinearLayout
+    <!--App BottomBar -->
+    <FrameLayout
+        android:id="@+id/fragmentContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:gravity="center"
-        app:layout_behavior="@string/appbar_scrolling_view_behavior">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Finanzas Simples"
-            android:textSize="32sp"
-            android:textStyle="bold"
-            android:textColor="@color/primary" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Para tu día a día"
-            android:textSize="24sp"
-            android:textColor="@color/black" />
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btnNuevaTransaccion"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nueva Transacción"
-            android:layout_marginTop="32dp" />
-    </LinearLayout>
+        android:layout_marginBottom="56dp" />
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom"
+        android:background="@color/white"
+        app:itemIconTint="@color/primary"
+        app:itemTextColor="@color/primary"
+        app:menu="@menu/bottom_nav_menu" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
